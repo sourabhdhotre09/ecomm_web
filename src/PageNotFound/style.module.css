@@ -3,6 +3,7 @@ body:has(.not_found_page) {
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
+    height: 100vh;
   }
   
   .not_found_page {
