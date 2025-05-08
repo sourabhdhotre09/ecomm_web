@@ -3,6 +3,8 @@ import Hero from '../components/Hero/Hero';
 import Popular from '../components/popular/Popular';
 import NewCollection from '../components/new_collections/NewCollection';
 
+import InternetAccess from '../components/internetAccesibility/InternetAccess';
+
 const Home = () => {
   
   return (
@@ -10,6 +12,7 @@ const Home = () => {
     <div className='container-fluid hero-section mb-5'>
       <Hero/>    
     </div>
+    
     <div className="container popular-section mb-5">
       <Popular/>
     </div>

@@ -10,6 +10,7 @@ import SingleProduct from '../pages/SingleProduct'
 import men_banner from '../assets/banner_mens.png'
 import women_banner from '../assets/banner_women.png'
 import kids_banner from '../assets/banner_kids.png'
+import LoginPage from '../pages/LoginPage'
 
 const AppRoutes = () => {
   return (
@@ -23,7 +24,9 @@ const AppRoutes = () => {
             <Route path='/kids' element={<ShopCategory banner={kids_banner} category="kid"/>}/>
             <Route path='/product/:productId' element={<SingleProduct/>}/>
             <Route path='/cart' element={<Cart/>}/>
+
         </Route>
+        <Route path='/login' element={<LoginPage/>}/>
         <Route path='*' element={<PageNotFound/>}/>
     </Routes> 
     </>

@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '/src/components/product_display/productDisplay.css'
 import star from '../../assets/star_icon.png'
 import star_dull from '../../assets/star_dull_icon.png'
+import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = ({product}) => {
+
+  const {addToCart, removeFromCart, cartItems} =useContext(ShopContext);
+
+  console.log('sss',cartItems);
+  
     
   return (
     <div className='product-single-page'>
@@ -31,10 +37,10 @@ const ProductDisplay = ({product}) => {
                 </div>
                 <div className="price_block">
                   <p className="old_price m-0">
-                    ₹{product.old_price}
+                    ${product.old_price}
                   </p>
                   <p className="new_price m-0">
-                    ₹{product.new_price}
+                    ${product.new_price}
                   </p>
                 </div>
                 <div className="product_sizes">
@@ -51,7 +57,7 @@ const ProductDisplay = ({product}) => {
                 </div>
 
                 <div className="add_btn">
-                  <button className='btn btn-danger rounded-3 my-4 px-4 py-2'>Add to Cart</button>
+                  <button onClick={()=>{addToCart(product.id)}} className='btn btn-danger rounded-3 my-4 px-4 py-2'>Add to Cart</button>
                 </div>
 
                 <div className="category_div my-2">
