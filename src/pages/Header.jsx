@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { NavLink,Link } from "react-router-dom";
 
 import logo from '../assets/logo.png'
+import cart_icon from '../assets/cart_icon.png'
 import { ShopContext } from "../Context/ShopContext";
+
 
 const Header = () => {
   const {totalItem} = useContext(ShopContext);
@@ -50,7 +52,7 @@ const Header = () => {
             </ul>
             <div className="login-info">
               <Link className="btn  cart-btn" to={'/cart'}>
-                <img className="w-75" src="/src/assets/cart_icon.png" alt="" />
+                <img className="w-75" src={cart_icon} alt="" />
                 <p className="product-cart-count bgPrimary">{totalItem}</p>
               </Link>
               <Link to={'/login'} className="btn btn-outline-success">Login</Link>
