@@ -1,4 +1,5 @@
 import React from 'react'
+import hero_img from '../../assets/hero_image.png'
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
         </div>
         <div className="col-md-6 hero-right">
             <div className="hero_img_outerdiv">
-              <img src="/src/assets/hero_image.png" className='hero_right_img' alt="" />
+              <img src={hero_img} className='hero_right_img' alt="" />
             </div>
         </div>
       </div>
