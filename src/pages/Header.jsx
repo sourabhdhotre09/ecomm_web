@@ -27,11 +27,17 @@ const Header = () => {
   return (
     <header className={isScrolled ? 'scrolled_header' : ''}>
       <nav className="navbar navbar-expand-lg fixed">
-        <div className="container" style={{columnGap:'30px'}}>
+        <div className="container">
           <NavLink to={'/'} className='nav-link logo_outer'><img src={logo} alt="" /><span className="logo_title">SD HUB</span></NavLink>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <div className="d-flex">
+            <Link className="btn  cart-btn hidden-md" to={'/cart'}>
+              <img className="w-75" src={cart_icon} alt="" />
+              <p className="product-cart-count bgPrimary">{totalItem}</p>
+            </Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -50,8 +56,8 @@ const Header = () => {
                 <NavLink to={'/kids'} className='nav-link'>Kids</NavLink>
               </li>
             </ul>
-            <div className="login-info">
-              <Link className="btn  cart-btn" to={'/cart'}>
+            <div className="login-info text-center">
+              <Link className="btn  cart-btn hidden-xs" to={'/cart'}>
                 <img className="w-75" src={cart_icon} alt="" />
                 <p className="product-cart-count bgPrimary">{totalItem}</p>
               </Link>

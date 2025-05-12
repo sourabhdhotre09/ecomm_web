@@ -40,6 +40,7 @@ const ShopCategory = ({banner,category}) => {
                   id={item.id} 
                   product_name={item.name} 
                   product_img={item.image} 
+                  category={item.category}
                   product_new_price={item.new_price} 
                   product_old_price={item.old_price} 
                 />

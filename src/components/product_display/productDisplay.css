@@ -59,3 +59,24 @@
 .product-single-page .add_btn .btn{
     font-size: 20px;
 }
+
+
+@media (max-width:767px){
+    .product-single-page .left-side .main_img{
+        height: 430px;
+      }
+      .breadcrumbs.py-5{
+        padding: 25px 0 !important;
+      }
+    
+      .product-single-page .price_block{
+        margin: 20px 0;
+      }
+      .product-single-page .product_sizes .sizes span {
+        width: 40px;
+        height: 40px;
+      }
+      .product-single-page .add_btn .btn {
+        font-size: 18px;
+    }
+}

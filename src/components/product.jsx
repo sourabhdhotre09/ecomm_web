@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 
 
 const product = (props) => {
+console.log("🚀 ~ product ~ props:", props)
 
   const {addToCart} = useContext(ShopContext);
   // Convert to fixed 2 decimal points and split {key, product_name,product_img, product_new_price, product_old_price}
@@ -21,7 +22,7 @@ const product = (props) => {
         </div>
         <div className="contentBox">
           <h3 className='product-name'>{props.product_name}</h3>
-          <h5>Category</h5>
+          <h5>{props.category}</h5>
           <div className="product_price">
             <h2 className="price">${intPart}.<small>{decimalPart}</small></h2>
             <h3 className='old_price'>${props.product_old_price}</h3>

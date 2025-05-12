@@ -324,6 +324,13 @@ header .cart-btn .product-cart-count {
     color: #43a047;
     text-decoration: none;
   }
+  .table-responsive{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .table-responsive th{
+    white-space: nowrap;
+  }
   
   @keyframes fadeIn {
     from { opacity: 0; }
@@ -341,9 +348,37 @@ header .cart-btn .product-cart-count {
     }
   }
   
+  .hidden-md{
+    display: none;
+  }
+  .navbar .container{
+    column-gap: 30px;
+  }
 
 
   @media (max-width:767px){
+    body{
+      font-size: 14px;
+    }
+    h2{
+      font-size: 20px;
+    }
+    h5,h4{
+      font-size: 18px;
+    }
+    .navbar-toggler-icon{
+      width: 1.2em;
+      height: 1.2em;
+    }
+    .navbar .container{
+      column-gap: 10px;
+    }
+    .hidden-xs{
+      display: none;
+    }
+    .hidden-md{
+      display: block;
+    }
     header{
       height: 66px;
     }
@@ -364,21 +399,59 @@ header .cart-btn .product-cart-count {
     }
     .hero-section .hero-left{
       margin-top: 0;
-      margin-bottom: 30px;
+      /* margin-bottom: 30px; */
     }
     .hero-section .hero_img_outerdiv{
       margin: 0 20px;
+    }
+    .hero-section .hero-left h2{
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .hero-section .hero-left p{
+      font-size: 14px;
+      margin-bottom: 10px;
     }
     .hero-section .hero-right .hero_right_img{
       margin-top: 10px;
       width: 100%;
     }
     .products_aligned{
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .products_aligned .link_tag{
+      padding: 10px;
+    }
+    .product_card{
+      height: 100%;
+      border-radius: 15px;
+    }
+    .product_card .mouse{
+      height: 160px;
+    }
+    .product_card::before{
+      top: -65%;
+      transform: skewY(350deg);
+    }
+    .product_card .contentBox h3{
+      font-size: 14px;
+      min-height: 15px;
+    }
+    .product_card .product_price{
+      column-gap: 10px;
+    }
+    .product_card .contentBox{
+      padding: 14px;
+    }
+    .product_card .contentBox .price{
+      font-size: 18px;
     }
     .product_card .contentBox .buy{
       opacity: 1;
       top: 0;
+      padding: 5px 10px;
+      font-size: 12px;
     }
     .product-single-page .left-side{
       flex-direction: column-reverse;
@@ -390,5 +463,10 @@ header .cart-btn .product-cart-count {
       gap: 10px !important;
       width: 100%;
       overflow: auto;
+    }
+
+
+    .product-single-page .left-side .main_img{
+      height: 430px;
     }
   }

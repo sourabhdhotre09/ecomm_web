@@ -8,10 +8,10 @@ const Products = () => {
     <>
       <div className="container py-5">
         <div className="row mb-3">
-            <div className="col-md-10">
+            <div className="col-6 col-md-10">
             <h2 className='mb-3'>Products</h2>
           </div>
-          <div className="col-md-2">
+          <div className="col-6 col-md-2">
               <select name="" id="" className='form-select'>
                 <option value="">Sort By</option>
                 <option value="">Name (Ascending)</option>
@@ -25,7 +25,7 @@ const Products = () => {
           <div className="col-md-12 products_aligned"  >
           {
             products.map((item,index)=>(
-                <Product key={index} id={item.id} product_name={item.name} product_img={item.image} product_new_price={item.new_price} product_old_price={item.old_price}/>
+                <Product key={index} id={item.id} product_name={item.name} product_img={item.image} category={item.category} product_new_price={item.new_price} product_old_price={item.old_price}/>
               ))
             }
           </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Product from '../../components/product'
 import related_products from '../../assets/data'
+console.log("🚀 ~ related_products:", related_products)
 
 const RelatedProducts = () => {
   return (
@@ -14,7 +15,7 @@ const RelatedProducts = () => {
           <div className="col-md-12 products_aligned">
             {
             related_products.map((item,index)=>(
-                <Product key={index} id={item.id} product_name={item.name} product_img={item.image} product_new_price={item.new_price} product_old_price={item.old_price}/>
+                <Product key={index} id={item.id} product_name={item.name} product_img={item.image} category={item.category} product_new_price={item.new_price} product_old_price={item.old_price}/>
             ))
             }
         </div>
