@@ -25,7 +25,7 @@ const Header = () => {
 
 
   return (
-    <header className={isScrolled ? 'scrolled_header' : 's'}>
+    <header className={isScrolled ? 'scrolled_header' : ''}>
       <nav className="navbar navbar-expand-lg fixed">
         <div className="container" style={{columnGap:'30px'}}>
           <NavLink to={'/'} className='nav-link logo_outer'><img src={logo} alt="" /><span className="logo_title">SD HUB</span></NavLink>

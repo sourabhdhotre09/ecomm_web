@@ -38,9 +38,8 @@ header .navbar{
     right: 0;
 z-index: 99;
 }
-header.scrolled_header {
+header.scrolled_header .navbar, .navbar:has(.collapse.show){
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Optional */
     transition: all 0.3s ease;
   }
 header .cart-btn {
@@ -108,7 +107,7 @@ header .cart-btn .product-cart-count {
 }
 .product_card {
   position: relative;
-  width: 320px;
+  width: 100%;
   height: 500px;
   background: #191919;
   border-radius: 20px;
@@ -237,7 +236,10 @@ header .cart-btn .product-cart-count {
 .products_aligned{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 30px;
+    /* gap: 30px; */
+}
+.products_aligned .link_tag{
+  padding: 15px;
 }
 
 
@@ -339,3 +341,54 @@ header .cart-btn .product-cart-count {
     }
   }
   
+
+
+  @media (max-width:767px){
+    header{
+      height: 66px;
+    }
+    header .navbar{
+      padding: 8px 0;
+    }
+    .logo_outer{
+      margin: 0;
+    }
+    .logo_outer img{
+      width: 50px;
+    }
+    .logo_title{
+      font-size: 30px;
+    }
+    .hero-section{
+      padding: 30px 0;
+    }
+    .hero-section .hero-left{
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .hero-section .hero_img_outerdiv{
+      margin: 0 20px;
+    }
+    .hero-section .hero-right .hero_right_img{
+      margin-top: 10px;
+      width: 100%;
+    }
+    .products_aligned{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .product_card .contentBox .buy{
+      opacity: 1;
+      top: 0;
+    }
+    .product-single-page .left-side{
+      flex-direction: column-reverse;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .product-single-page .left-side .side_images{
+      flex-direction: row !important;
+      gap: 10px !important;
+      width: 100%;
+      overflow: auto;
+    }
+  }

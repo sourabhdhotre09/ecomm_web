@@ -1,5 +1,6 @@
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // this is important for toggle
 import './App.css'
 import AppRoutes from './routes/AppRoutes'
 import { ToastContainer } from 'react-toastify'
