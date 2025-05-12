@@ -3,12 +3,14 @@ import '/src/components/product_display/productDisplay.css'
 import star from '../../assets/star_icon.png'
 import star_dull from '../../assets/star_dull_icon.png'
 import { ShopContext } from '../../Context/ShopContext'
+import { toast } from 'react-toastify';
 
 const ProductDisplay = ({product}) => {
 
   const {addToCart, removeFromCart, cartItems} =useContext(ShopContext);
 
   console.log('sss',cartItems);
+  const notify =()=> toast.success('Product Added');
   
     
   return (
@@ -57,7 +59,7 @@ const ProductDisplay = ({product}) => {
                 </div>
 
                 <div className="add_btn">
-                  <button onClick={()=>{addToCart(product.id)}} className='btn btn-danger rounded-3 my-4 px-4 py-2'>Add to Cart</button>
+                  <button onClick={()=>{addToCart(product.id);notify();}} className='btn btn-danger rounded-3 my-4 px-4 py-2'>Add to Cart</button>
                 </div>
 
                 <div className="category_div my-2">

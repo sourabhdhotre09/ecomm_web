@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import removeArrow from '/src/assets/cart_cross_icon.png'
+import { toast } from 'react-toastify';
 
 const Cart = () => {
 
   const {all_product, removeFromCart, cartItems,totalPrice} =useContext(ShopContext);
+  const notify =()=> toast.warn('The project is currently underway.');
+
   return (
     <>
       <div className="container py-5">
@@ -63,7 +66,7 @@ const Cart = () => {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <button className='btn btn-danger rounded-3 my-4 px-4 py-2'>Checkout to Proceed</button>
+              <button className='btn btn-danger rounded-3 my-4 px-4 py-2' onClick={()=>{notify()}}>Checkout to Proceed</button>
             </div>
           </div>
         </div>
